@@ -1,4 +1,4 @@
-import { Events, NavController, NavParams,ViewController, AlertController } from 'ionic-angular';
+import { Events, NavController, NavParams, AlertController } from 'ionic-angular';
 import { Component } from '@angular/core';
 import { Item } from '../../providers/todo-service';
 
@@ -11,7 +11,7 @@ export class TodoDetail {
   private item: Item;
   private newTask: boolean;
 
-  constructor( public viewcontrol: ViewController, public alertControl: AlertController, public events: Events, public navControl: NavController, navParams: NavParams) {
+  constructor( public alertControl: AlertController, public events: Events, public navControl: NavController, navParams: NavParams) {
     if (navParams.data != null) {
       this.item = navParams.data["currentItem"];
       this.newTask = navParams.data["newTask"];
@@ -45,9 +45,7 @@ export class TodoDetail {
     else {
       this.events.publish('item:added', this.item);
       this.navControl.pop();
-    }}
-  // completedChanged(event) {  }
-  
+    }}      
   // Navigation
   goBack() {
     this.navControl.pop();
