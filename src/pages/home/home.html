@@ -1,4 +1,4 @@
-<ion-content style="background-color:darkcyan">
+<ion-content id="Mainbackground" style="background-color:darkcyan">
   <!-- Grid -->
   <ion-grid>
     <!-- Title -->
@@ -9,11 +9,8 @@
   </ion-navbar>
 
     <!-- To-do tasks -->
-
     <ion-row id="items-list">
       <ion-col>
-        <!-- List of task -->
-
         <ion-list no-lines margin-top>
           <ion-item *ngFor="let item of items">
             <ion-checkbox item-left [(ngModel)]="item.completed"></ion-checkbox>
@@ -22,7 +19,7 @@
         </ion-list>
       </ion-col>
    </ion-row>
-    <!-- Add new Button -->
+    <!-- 'Add new Task' Button -->
     <button ion-button (click)="addNew()">
   <ion-icon name="add"></ion-icon>
 </button> 
