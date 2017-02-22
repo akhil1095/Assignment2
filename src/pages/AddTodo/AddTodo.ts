@@ -1,3 +1,8 @@
+// Name:Akhil Thakkar
+// Student ID: 200300312
+// Description: This is AddTodo.ts where all the functionality of adding todo 
+//              is, lets user enter the title and decription and save the todo
+// version:1.0.0
 import { Events, NavController, NavParams, AlertController } from 'ionic-angular';
 import { Component } from '@angular/core';
 import { Item } from '../../providers/todo-service';
