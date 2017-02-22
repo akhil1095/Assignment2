@@ -16,7 +16,7 @@ export class ToDo {
       this.items.push(item);
     });
   }
-  // Add functions
+  // Add function
   addNew() {
     this.navCtrl.push(TodoDetail, {
       currentItem: new Item("", "", false),
