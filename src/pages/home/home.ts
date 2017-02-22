@@ -30,13 +30,7 @@ export class ToDo {
       newItem: false
     });
   }
-  getCompleted() {
-    let counter: number = 0;
-    for (let i = 0; i < this.items.length; ++i) {
-      if (this.items[i].completed)
-        counter++;
-    }
-  }
+  
   getTextDecoration(truth: boolean) {
     return (truth) ? "line-through" : "none";
   }
