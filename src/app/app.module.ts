@@ -1,3 +1,7 @@
+// Name:Akhil Thakkar
+// Student ID: 200300312
+// Description: This is module page where the pages are routed
+// version:1.0.0
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
