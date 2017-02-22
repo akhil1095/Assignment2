@@ -1,0 +1,31 @@
+<ion-content  style="background-color:darkcyan">
+  <!-- Grid layout-->
+  <ion-grid>
+    <!-- heading -->
+   <ion-navbar danger navbar>
+    <ion-title>
+      Details
+    </ion-title>
+  </ion-navbar>
+<!--task Information-->
+   <ion-row padding-top margin-top>
+        <ion-list no-lines>
+          <ion-item no-lines>
+            <ion-label style="color: black">Task:</ion-label>
+            <ion-input text-wrap [(ngModel)]="item.task"></ion-input>
+          </ion-item>
+          <ion-item no-lines>
+            <ion-label style="color: black">Description:</ion-label>
+            <ion-textarea text-wrap fz-elastic [(ngModel)]="item.description"></ion-textarea>
+          </ion-item>
+        </ion-list>
+    </ion-row>
+    <!-- Adding New Item  -->
+    <div *ngIf="newItem">
+      <!-- Save new task Button -->
+      <button ion-button color="secondary" (click)="addItem()">save</button>
+      <!-- Back Item Button -->
+      <button ion-button color="dark" (click)="goBack()">close</button>
+    </div>
+  </ion-grid>
+</ion-content>

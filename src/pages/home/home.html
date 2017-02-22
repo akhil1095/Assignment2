@@ -1,0 +1,30 @@
+<ion-content style="background-color:darkcyan">
+  <!-- Grid -->
+  <ion-grid>
+    <!-- Title -->
+   <ion-navbar primary navbar>
+    <ion-title>
+      Todo-List App
+    </ion-title>
+  </ion-navbar>
+
+    <!-- To-do tasks -->
+
+    <ion-row id="items-list">
+      <ion-col>
+        <!-- List of task -->
+
+        <ion-list no-lines margin-top>
+          <ion-item *ngFor="let item of items">
+            <ion-checkbox item-left [(ngModel)]="item.completed"></ion-checkbox>
+            <ion-label [style.text-decoration]="getTextDecoration(item.completed)">{{item.title}}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+   </ion-row>
+    <!-- Add new Button -->
+    <button ion-button (click)="addNew()">
+  <ion-icon name="add"></ion-icon>
+</button> 
+  </ion-grid>
+</ion-content>
