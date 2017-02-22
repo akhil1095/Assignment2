@@ -1,3 +1,8 @@
+//  Name:Akhil Thakkar
+//  Student ID: 200300312
+//  Description: This is home.ts page where it exports the tasks 
+//                and also has functionality to add new task
+//  version:1.0.0
 import { TodoDetail } from '../AddTodo/AddTodo';
 import { Component } from '@angular/core';
 import { Events, NavController } from 'ionic-angular';
