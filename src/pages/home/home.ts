@@ -20,14 +20,14 @@ export class ToDo {
   addNew() {
     this.navCtrl.push(TodoDetail, {
       currentItem: new Item("", "", false),
-      newItem: true
+      newTask: true
     });
   }
   //Open add page
   openAdd(item: Item) {
     this.navCtrl.push(TodoDetail, {
       currentItem: item,
-      newItem: false
+      newTask: false
     });
   }
   

@@ -9,15 +9,15 @@ import { Item } from '../../providers/todo-service';
 export class TodoDetail {
 
   private item: Item;
-  private newItem: boolean;
+  private newTask: boolean;
 
   constructor( public viewcontrol: ViewController, public alertControl: AlertController, public events: Events, public navControl: NavController, navParams: NavParams) {
     if (navParams.data != null) {
       this.item = navParams.data["currentItem"];
-      this.newItem = navParams.data["newItem"];
+      this.newTask = navParams.data["newTask"];
     }}
 
-// Add item
+// Add Task
   private addItem() {
     if (this.item.title === "") {
       let prompt = this.alertControl.create({
@@ -46,7 +46,7 @@ export class TodoDetail {
       this.events.publish('item:added', this.item);
       this.navControl.pop();
     }}
-  completedChanged(event) {  }
+  // completedChanged(event) {  }
   
   // Navigation
   goBack() {
